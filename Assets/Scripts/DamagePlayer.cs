@@ -5,6 +5,6 @@ public class DamagePlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        other.transform.parent.GetComponent<Character>().Damage(1);
+        other.transform.parent.GetComponent<IDamageable>().TakeDamage(1);
     }
 }

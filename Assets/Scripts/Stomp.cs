@@ -13,8 +13,8 @@ public class Stomp : MonoBehaviour
     {
         if (rb.velocity.y < -0.05f)
         {
-            other.transform.parent.GetComponent<Character>().Damage(1);
-            transform.parent.GetComponent<Movement>().Jump();
+            other.transform.parent.GetComponent<IDamageable>().TakeDamage(1);
+            transform.parent.GetComponent<Movement>().DoJump(Vector2.up, 10);
         }
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bat : MonoBehaviour
+public class Bat : Enemy
 {
 
     public Transform target;

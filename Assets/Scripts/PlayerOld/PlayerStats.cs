@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class PlayerStats : MonoBehaviour
@@ -45,7 +43,7 @@ public class PlayerStats : MonoBehaviour
             jumpDirection.y = Mathf.Abs(jumpDirection.y);
             jumpDirection = (jumpDirection + Vector2.up).normalized;
             
-            GetComponent<Movement>().Jump(jumpDirection, 4);
+            GetComponent<Movement>().DoJump(jumpDirection, 4);
         }
 
         lastHealth = c.health;

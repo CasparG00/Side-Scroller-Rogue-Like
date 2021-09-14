@@ -26,15 +26,22 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void OnEnable()
+    {
+        PlayerInput.input += DoMove;
+        PlayerInput.jump += DoJump;
+    }
+
+    void OnDisable()
+    {
+        PlayerInput.input -= DoMove;
+        PlayerInput.jump -= DoJump;
+    }
+
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(transform.position, groundCheckRadius, excludePlayer);
 
-        if (Input.GetButton("Jump") && isGrounded)
-        {
-            Jump();
-        }
-        
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
         
         if (rb.velocity.y < 0)
@@ -50,21 +57,30 @@ public class Movement : MonoBehaviour
         else if (direction > 0) sr.flipX = false;
     }
 
-    void FixedUpdate()
-    {
-        var input = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Speed", Mathf.Abs(input));
-        direction = input;
+    // void FixedUpdate()
+    // {
+    //     var input = Input.GetAxisRaw("Horizontal");
+    //     animator.SetFloat("Speed", Mathf.Abs(input));
+    //     direction = input;
+    //
+    //     rb.velocity = new Vector2(input * speed, rb.velocity.y);
+    // }
 
-        rb.velocity = new Vector2(input * speed, rb.velocity.y);
-    }
-    
-    public void Jump()
+    private void DoMove(float _movement)
     {
-        rb.velocity = Vector2.up * jumpVelocity;
+        direction = _movement;
+        rb.velocity = new Vector2(_movement * speed, rb.velocity.y);
     }
 
-    public void Jump(Vector2 direction, float velocity)
+    private void DoJump()
+    {
+        if (isGrounded) 
+        {
+            rb.velocity = Vector2.up * jumpVelocity;
+        }
+    }
+
+    public void DoJump(Vector2 direction, float velocity)
     {
         rb.velocity = direction * velocity;
     }

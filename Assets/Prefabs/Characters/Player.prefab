@@ -70,9 +70,10 @@ GameObject:
   - component: {fileID: 3369375228584899822}
   - component: {fileID: 3369375228584899819}
   - component: {fileID: 3369375228584899823}
-  - component: {fileID: 3369375228584899824}
-  - component: {fileID: 3369375228584899818}
-  - component: {fileID: 3369375228584899817}
+  - component: {fileID: 7244462721929751154}
+  - component: {fileID: 5692829184541459603}
+  - component: {fileID: 2479952612152525280}
+  - component: {fileID: 2304864263835797704}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -216,7 +217,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.625, y: 0.875}
   m_EdgeRadius: 0
---- !u!114 &3369375228584899824
+--- !u!114 &7244462721929751154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369375228584899825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad34f743e5a0b9642b19422fab6138cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5692829184541459603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369375228584899825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9162b675dcba84141aab380646d8645d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2479952612152525280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369375228584899825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb885719c18d5f49a2680811718d6fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2304864263835797704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,45 +265,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817b14a49ee98464aa53719edbc3c96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpVelocity: 7
+  speed: 4
+  jumpVelocity: 10
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
-  groundCheckRadius: 0.2
+  groundCheckRadius: 0.1
   excludePlayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   isGrounded: 0
---- !u!114 &3369375228584899818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3369375228584899825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec6ebccd0f73b144baf2d892a6b642ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  maxHealth: 2
-  corpse: {fileID: 4636636945318875448, guid: b943697eaae4c9441a3a31811af6423e, type: 3}
-  isInvulnerable: 0
---- !u!114 &3369375228584899817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3369375228584899825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 786cefbe890761d4d9506561f6beeafa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  helmet: {fileID: 3369375229491617141}
-  helmetRagdoll: {fileID: 1507383594082555261, guid: 95bc265e2d4e1e544a88c6e688e2da7a, type: 3}
 --- !u!1 &3369375228813382483
 GameObject:
   m_ObjectHideFlags: 0

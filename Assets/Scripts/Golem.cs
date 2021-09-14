@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Golem : MonoBehaviour
+public class Golem : Enemy
 {
     public float speed = 10;
 
