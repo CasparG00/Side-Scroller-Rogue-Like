@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class HelmetAnimation : MonoBehaviour
 {
-    Animator animator;
-    Animator baseAnimator;
-    SpriteRenderer spriteRenderer;
-    SpriteRenderer baseSpriteRenderer;
+    private Animator animator;
+    private Animator baseAnimator;
+    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer baseSpriteRenderer;
 
     void Start() 
     {

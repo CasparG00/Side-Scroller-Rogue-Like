@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 5692829184541459603}
   - component: {fileID: 2479952612152525280}
   - component: {fileID: 2304864263835797704}
+  - component: {fileID: 7854580155974268292}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -167,7 +168,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f1563299253cf494c994c4d62e7534d9, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -265,15 +266,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817b14a49ee98464aa53719edbc3c96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  jumpVelocity: 10
+  speed: 6
+  jumpVelocity: 7
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   groundCheckRadius: 0.1
   excludePlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 7287
   isGrounded: 0
+--- !u!114 &7854580155974268292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369375228584899825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608eb765aedf52d48b3579652d11c974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3369375228813382483
 GameObject:
   m_ObjectHideFlags: 0

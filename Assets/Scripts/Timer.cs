@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
 
         if (currentTime <= 0 && player != null)
         {
-            player.GetComponent<Character>().health = 0;
+            player.GetComponent<IDamageable>().TakeDamage(2);
         }
         
         timer.text = Mathf.Ceil(currentTime).ToString();
@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
 
     void OnGenerated()
     {
-        player = FindObjectOfType<PlayerStats>().transform;
+        player = Player.Instance.transform;
         TileLevelGenerator.GeneratedEvent -= OnGenerated;
     }
 

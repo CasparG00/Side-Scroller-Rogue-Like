@@ -418,12 +418,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2304864263835797704, guid: b34c39dccac41ae40a7006ded719bece, type: 3}
-      propertyPath: jumpVelocity
-      value: 100
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2304864263835797704, guid: b34c39dccac41ae40a7006ded719bece, type: 3}
-      propertyPath: excludePlayer.m_Bits
-      value: 7287
+      propertyPath: jumpVelocity
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3369375228584899820, guid: b34c39dccac41ae40a7006ded719bece, type: 3}
       propertyPath: m_RootOrder
@@ -469,10 +469,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3369375228584899822, guid: b34c39dccac41ae40a7006ded719bece, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: f1563299253cf494c994c4d62e7534d9, type: 2}
     - target: {fileID: 3369375228584899825, guid: b34c39dccac41ae40a7006ded719bece, type: 3}
       propertyPath: m_Name
       value: Player
