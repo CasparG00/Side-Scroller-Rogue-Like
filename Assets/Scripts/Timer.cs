@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
 
     void OnGenerated()
     {
-        player = Player.Instance.transform;
+        player = Player.instance.transform;
         TileLevelGenerator.GeneratedEvent -= OnGenerated;
     }
 

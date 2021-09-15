@@ -9,9 +9,9 @@ public class PlayerAnimation : MonoBehaviour
 
     void OnEnable()
     {
-        rb = Player.Instance.GetComponent<Rigidbody2D>();
-        animator = Player.Instance.GetComponent<Animator>();
-        sr = Player.Instance.GetComponent<SpriteRenderer>();
+        rb = Player.instance.GetComponent<Rigidbody2D>();
+        animator = Player.instance.GetComponent<Animator>();
+        sr = Player.instance.GetComponent<SpriteRenderer>();
 
         Player.grounded += CheckIfJumping;
         PlayerInput.input += AnimateMovement;

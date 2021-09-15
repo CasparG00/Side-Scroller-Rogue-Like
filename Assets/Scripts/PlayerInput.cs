@@ -8,7 +8,7 @@ public class PlayerInput : Singleton<PlayerInput>
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
     }
 
     private void Update()

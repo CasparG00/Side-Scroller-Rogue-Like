@@ -6,7 +6,7 @@ public class Player : Singleton<Player>
 
     private void OnEnable()
     {
-        Instance = this;
+        instance = this;
     }
 
     public void InvokeGroundedAction(bool _isGrounded)

@@ -2,19 +2,19 @@ using UnityEngine;
 
 public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    private static T instance;
-    public static T Instance
+    private static T myInstance;
+    public static T instance
     {
         get
         {
-            if (instance != null) return instance;
+            if (myInstance != null) return myInstance;
             var result = FindObjectOfType<T>();
             if(result != null)
             {
-                instance = result;
+                myInstance = result;
             }
-            return instance;
+            return myInstance;
         }
-        set => instance = value;
+        set => myInstance = value;
     }
 }

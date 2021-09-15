@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(transform.position, groundCheckRadius, excludePlayer);
-        Player.Instance.InvokeGroundedAction(isGrounded);
+        Player.instance.InvokeGroundedAction(isGrounded);
 
         if (rb.velocity.y < 0)
         {
